@@ -473,6 +473,18 @@
               </li>
             </ul>
           </li>
+          <li class="footer-subscribe-items">
+            <form class="subscribe">
+              <label for="email">Subscribe</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+              <button type="submit" class="order btn">Subscribe</button>
+            </form>
+          </li>
         </ul>
       </div>
     </footer>
@@ -484,6 +496,39 @@
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-txt">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <div class="form-field">
+            <input type="text" name="name" id="name" class="modal-input" />
+            <label for="name" class="modal-label">Name</label>
+          </div>
+          <div class="form-field">
+            <input type="tel" name="phone" id="phone" class="modal-input" />
+            <label for="phone" class="modal-label">Phone</label>
+          </div>
+          <div class="form-field">
+            <input type="email" name="email" id="mail" class="modal-input" />
+            <label for="mail" class="modal-label">E-mail</label>
+          </div>
+          <div class="form-field">
+            <textarea
+              class="form-textarea"
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+              placeholder="Text input"
+            ></textarea>
+            <label for="comment" class="modal-label">Comment</label>
+          </div>
+          <div class="form-field policy">
+            <input type="checkbox" name="" id="policy" />
+            <label for="policy" class="modal-label"
+              >I accept the terms and conditions of the Privacy Policy</label
+            >
+          </div>
+          <button type="submit" class="send order btn">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
