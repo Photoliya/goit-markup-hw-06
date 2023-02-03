@@ -593,7 +593,40 @@ ul {
     margin-left: 80px;
 }
 
+.subscribe {
+    display: flex;
+    gap: var(--uni-gap);
+}
 
+
+.subscribe-input {
+
+    padding: 8px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+}
+
+.subscribe-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    padding-left: var(--uni-gap);
+    letter-spacing: 0.04em;
+    color: var(--white);
+}
+
+.subscribe-icon {
+    padding: 8px 24px 8px 16px;
+}
 
 
 /* modal  */
@@ -629,11 +662,13 @@ ul {
     transform: translate(-50%, -50%);
 
     width: 408px;
-    height: 576px;
+    height: 584px;
 
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    text-align: center;
 }
 
 .close {
@@ -660,15 +695,18 @@ ul {
     margin-left: auto;
     margin-right: auto;
     width: 360px;
+    text-align: left;
 }
 
 .form-field {
+    position: relative;
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 8px;
 }
 
 .modal-label {
+    margin-bottom: 4px;
     color: var(--light-slate);
     font-size: 12px;
     line-height: 1.3;
@@ -676,12 +714,16 @@ ul {
 }
 
 .modal-input {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    padding-left: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
 
 
 .form-textarea {
+    width: 100%;
     height: 120px;
     resize: none;
 
@@ -702,10 +744,44 @@ ul {
 .form-field.policy {
     flex-direction: row;
     gap: 8px;
+    margin-bottom: 0;
+}
+
+.policy-link {
+    color: var(--primary-brand-color);
+    text-decoration: underline;
 }
 
 .send {
-    width: 169px;
-    height: 56px;
-    margin-top: var(--uni-gap);
+    margin-top: 24px;
+    padding: 16px 32px;
+}
+
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.checkbox-input {
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
+}
+
+.checkbox:checked+.checkbox-input {
+    background-color: var(--primary-brand-color);
+    background-image: url(../images/check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    border: none;
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
 }
