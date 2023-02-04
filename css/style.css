@@ -600,12 +600,12 @@ ul {
 
 
 .subscribe-input {
-
     padding: 8px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+    color: var(--Accent);
 }
 
 .subscribe-input::placeholder {
@@ -648,12 +648,12 @@ ul {
     transition-timing-function: var(--cubic);
 }
 
-/* .backdrop.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: scale(0.8);
-} */
+}
 
 .modal {
     position: absolute;
@@ -719,11 +719,25 @@ ul {
     padding-left: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition-property: border-color, color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--cubic);
 }
 
 .modal-input:focus {
     border-color: var(--primary-brand-color);
-    fill: var(--primary-brand-color);
+}
+
+.modal-input:focus+.form-icon {
+    color: var(--primary-brand-color);
+}
+
+.form-icon {
+    color: var(--dark);
+    position: absolute;
+    top: 50%;
+    left: 16px;
 }
 
 .form-textarea {
@@ -736,6 +750,10 @@ ul {
 
     padding-left: 8px;
     padding-top: 8px;
+
+    transition-property: border-color;
+    transition-duration: var(--time);
+    transition-timing-function: var(--cubic);
 }
 
 .form-textarea:focus {
@@ -761,6 +779,7 @@ ul {
 }
 
 .send {
+    width: 169px;
     margin-top: 24px;
     padding: 16px 32px;
 }
@@ -785,11 +804,5 @@ ul {
     background-image: url(../images/check.svg);
     background-size: contain;
     background-origin: border-box;
-    border: none;
-}
-
-.form-icon {
-    position: absolute;
-    top: 50%;
-    left: 16px;
+    border-color: var(--primary-brand-color);
 }
