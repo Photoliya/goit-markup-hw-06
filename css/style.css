@@ -600,6 +600,7 @@ ul {
 
 
 .subscribe-input {
+    width: 264px;
     padding: 8px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -662,7 +663,10 @@ ul {
     transform: translate(-50%, -50%);
 
     width: 408px;
-    height: 584px;
+    padding-top: 72px;
+    padding-left: var(--uni-gap);
+    padding-right: var(--uni-gap);
+    padding-bottom: var(--uni-gap);
 
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -683,19 +687,32 @@ ul {
     border-radius: 50%;
 }
 
-.modal-txt {
+.close:hover,
+.close:focus {
+    background: var(--pressed-state);
+    border: 1px solid var(--pressed-state);
+    color: var(--white);
+}
 
-    padding-top: 72px;
-    padding-left: var(--uni-gap);
-    padding-right: var(--uni-gap);
+
+
+.modal-txt {
+    font-style: normal;
+    font-weight: 500;
     margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    letter-spacing: 0.02em;
+
+
 }
 
 .modal-form {
     margin-left: auto;
     margin-right: auto;
     width: 360px;
-    text-align: left;
+    text-align: center;
 }
 
 .form-field {
@@ -703,6 +720,7 @@ ul {
     display: flex;
     flex-direction: column-reverse;
     margin-bottom: 8px;
+    text-align: left;
 }
 
 .modal-label {
@@ -719,6 +737,7 @@ ul {
     padding-left: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    outline: none;
 
     transition-property: border-color, color;
     transition-duration: var(--time);
@@ -750,6 +769,7 @@ ul {
 
     padding-left: 8px;
     padding-top: 8px;
+    outline: none;
 
     transition-property: border-color;
     transition-duration: var(--time);
@@ -790,7 +810,6 @@ ul {
 }
 
 .checkbox-input {
-    display: block;
     width: 16px;
     height: 16px;
 
@@ -799,7 +818,8 @@ ul {
     filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.2)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.12)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.14));
 }
 
-.checkbox:checked+.checkbox-input {
+.checkbox:checked+.checkbox-input,
+.checkbox:focus+.checkbox-input {
     background-color: var(--primary-brand-color);
     background-image: url(../images/check.svg);
     background-size: contain;
